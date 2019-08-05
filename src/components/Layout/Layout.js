@@ -3,7 +3,14 @@ import './Layout.css';
 
 class Layout extends PureComponent {
   render() {
-    return 'empty';
+    const { header, footer, children } = this.props;
+    return (
+      <React.Fragment>
+        {header}
+        {children}
+        {footer}
+      </React.Fragment>
+    );
   }
 }
 
