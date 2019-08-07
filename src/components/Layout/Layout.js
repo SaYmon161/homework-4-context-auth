@@ -4,10 +4,22 @@ import './Layout.css';
 
 class Layout extends PureComponent {
   renderHeader = Header => {
-    return <Header />;
+    return (
+      <header className="header">
+        <p className="header__title section-title">Header</p>
+        <div className="header__content">
+          <Header />
+        </div>
+      </header>
+    );
   };
   renderFooter = Footer => {
-    return <Footer />;
+    return (
+      <footer className="footer">
+        <p className="header__title section-title">Footer</p>
+        <Footer />;
+      </footer>
+    );
   };
   render() {
     const { header, footer, children } = this.props;
